@@ -15,9 +15,9 @@
 \maketitle
 
 \section*{Behavior and Implementation}
-In this lab, we were able to program the Nao to detect when a person is face to face with the Nao. When this condition is met, the Nao will greet the person in front of it and ask for their name. The Nao will then try to listen to the person's name and when they leave they will say "Goodbye {person's name}". When implementing this program we noticed that the Nao would occasionally recenter it's facial orientation to focus on the person's face. Sometimes the Nao had difficulty recognizing what was said to it, sometimes it would hear what the person in front was saying as well as the people around it. Other times it wouldn't recognize anything anyone said even though the computer microphone was close to the user.  \\
+In this lab, we were able to program the Nao to detect when a person is face to face with the Nao. When this condition is met, the Nao greets the person in front of it and asks for their name. The Nao will then listen for the person's name, and when the person leaves, the Nao will say, ``Goodbye [person's name].'' When implementing this program we noticed that the Nao would occasionally recenter its head to focus on the person's face. Sometimes the Nao had difficulty recognizing what was said to it. It would sometimes hear both the person in front of it and the people around it. Other times it wouldn't recognize anything anyone said even though the computer microphone was close to the user.
 
-With regard to Implementation, we modified code to go from simply detecting a person in front of the Nao, to first using text to speech to say "Hi, What is your name?" and then listening for the response. Afterwards it would store whatever the person said as well as the person ID. When the person would leave, the code would recall the ID and say "Goodbye" with whatever the person said. 
+With regard to implementation, we modified the code to go from simply detecting a person in front of the Nao, to first using text to speech to say "Hi, What is your name?" and then listening for the response. Afterwards, it would store what the person said and associate it with the person's ID. When the person left, the code would use the stored ID to retrieve the name and have the Nao say ``Goodbye'' followed by the person's name.
 
 \section*{Video}
 
@@ -25,9 +25,10 @@ With regard to Implementation, we modified code to go from simply detecting a pe
 
 \section*{Target Domain}
 
+Our target domain is education, and the person we are interviewing is a Director of Technology and Client Services. In this setting, the behavior we implemented could let a robot greet students, faculty, or staff as they approach. By asking for a name, listening to the response, and storing it with the person's ID until they leave, we can make the interaction more personal and say goodbye using the name they gave. This could be a starting point for an interactive point of contact in an educational technology or client-services area. In the future, a robot could build on this behavior to direct people toward technology support, campus resources, or other services. Our current implementation does not provide help-desk support, answer technical questions, or permanently recognize people, but its arrival and departure awareness gives us a foundation for those more useful interactions in education.
 
 
 \section*{Acknowledgments}
-[Benton Wandfluh, Josiah Hamm, Zack Quraishi, Alex Fong]
+Benton Wandfluh, Josiah Hamm, Zack Quraishi, Alex Fong
 
 \end{document}
