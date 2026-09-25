@@ -2,6 +2,791 @@
 <!-- Generated using onshape-to-robot -->
 <!-- Onshape https://cad.onshape.com/documents/4b055c350ec1056178172f12/w/dabb94c390d2df95343427ab/e/7ceea8052d9961ebb08f8fbb -->
 <robot name="robot1">
+  <!-- Link large_support -->
+  <link name="large_support">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part large_support -->
+    <visual>
+      <origin xyz="0 0 0.06985" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/large_support.stl"/>
+      </geometry>
+      <material name="large_support_material">
+        <color rgba="0.972549 0.529412 0.00392157 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.06985" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/large_support.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link stepper_motor -->
+  <link name="stepper_motor">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part stepper_motor -->
+    <visual>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/stepper_motor.stl"/>
+      </geometry>
+      <material name="stepper_motor_material">
+        <color rgba="0.380392 0.478431 0.788235 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/stepper_motor.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part 28byj_48_003 -->
+    <visual>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_003.stl"/>
+      </geometry>
+      <material name="28byj_48_003_material">
+        <color rgba="0.796078 0.823529 0.937255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_003.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part 28byj_48_005 -->
+    <visual>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_005.stl"/>
+      </geometry>
+      <material name="28byj_48_005_material">
+        <color rgba="0.647059 0.517647 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_005.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part 28byj_48_006 -->
+    <visual>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_006.stl"/>
+      </geometry>
+      <material name="28byj_48_006_material">
+        <color rgba="0 0.494118 0.956863 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_006.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part 28byj_48_002 -->
+    <visual>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_002.stl"/>
+      </geometry>
+      <material name="28byj_48_002_material">
+        <color rgba="0.529412 0.54902 0.54902 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.0495265 -0.0223305 -0.00965757" rpy="0 -1.22173 -1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_002.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b -->
+  <link name="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b">
+    <inertial>
+      <origin xyz="0 -0 -0.000492096" rpy="0 0 0"/>
+      <mass value="0.00135184"/>
+      <inertia ixx="1.1493e-08" ixy="0" ixz="0" iyy="1.1493e-08" iyz="0" izz="6.201e-09"/>
+    </inertial>
+    <!-- Part hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b -->
+    <visual>
+      <origin xyz="0 0 0.0028" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b.stl"/>
+      </geometry>
+      <material name="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0028" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from stepper_motor to hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b -->
+  <joint name="f8" type="fixed">
+    <origin xyz="0 0 -0.0008" rpy="3.14159 -0 -1.5708"/>
+    <parent link="stepper_motor"/>
+    <child link="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_2 -->
+  <link name="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_2">
+    <inertial>
+      <origin xyz="0 -0 -0.000492096" rpy="0 0 0"/>
+      <mass value="0.00135184"/>
+      <inertia ixx="1.1493e-08" ixy="0" ixz="0" iyy="1.1493e-08" iyz="0" izz="6.201e-09"/>
+    </inertial>
+    <!-- Part hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_2 -->
+    <visual>
+      <origin xyz="0 0 0.0028" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b.stl"/>
+      </geometry>
+      <material name="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_2_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0028" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from stepper_motor to hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_2 -->
+  <joint name="f8" type="fixed">
+    <origin xyz="-0.035 -0 -0.0008" rpy="3.14159 -0 -1.5708"/>
+    <parent link="stepper_motor"/>
+    <child link="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from large_support to stepper_motor -->
+  <joint name="f3" type="fixed">
+    <origin xyz="-0.06754 0.0175 0.06195" rpy="1.5708 -0 1.5708"/>
+    <parent link="large_support"/>
+    <child link="stepper_motor"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link stepper_motor_2 -->
+  <link name="stepper_motor_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part stepper_motor_2 -->
+    <visual>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/stepper_motor.stl"/>
+      </geometry>
+      <material name="stepper_motor_2_material">
+        <color rgba="0.380392 0.478431 0.788235 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/stepper_motor.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part 28byj_48_003_2 -->
+    <visual>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_003.stl"/>
+      </geometry>
+      <material name="28byj_48_003_2_material">
+        <color rgba="0.796078 0.823529 0.937255 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_003.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part 28byj_48_005_2 -->
+    <visual>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_005.stl"/>
+      </geometry>
+      <material name="28byj_48_005_2_material">
+        <color rgba="0.647059 0.517647 0 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_005.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part 28byj_48_006_2 -->
+    <visual>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_006.stl"/>
+      </geometry>
+      <material name="28byj_48_006_2_material">
+        <color rgba="0 0.494118 0.956863 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_006.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part 28byj_48_002_2 -->
+    <visual>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_002.stl"/>
+      </geometry>
+      <material name="28byj_48_002_2_material">
+        <color rgba="0.529412 0.54902 0.54902 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0.0145265 0.0223305 -0.00965757" rpy="0 -1.22173 1.5708"/>
+      <geometry>
+        <mesh filename="package://assets/28byj_48_002.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_3 -->
+  <link name="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_3">
+    <inertial>
+      <origin xyz="0 -0 -0.000492096" rpy="0 0 0"/>
+      <mass value="0.00135184"/>
+      <inertia ixx="1.1493e-08" ixy="0" ixz="0" iyy="1.1493e-08" iyz="0" izz="6.201e-09"/>
+    </inertial>
+    <!-- Part hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_3 -->
+    <visual>
+      <origin xyz="0 0 0.0028" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b.stl"/>
+      </geometry>
+      <material name="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_3_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0028" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from stepper_motor_2 to hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_3 -->
+  <joint name="f8" type="fixed">
+    <origin xyz="0 -0 -0.0008" rpy="-3.14159 0 1.5708"/>
+    <parent link="stepper_motor_2"/>
+    <child link="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_4 -->
+  <link name="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_4">
+    <inertial>
+      <origin xyz="-0 -0 -0.000492096" rpy="0 0 0"/>
+      <mass value="0.00135184"/>
+      <inertia ixx="1.1493e-08" ixy="0" ixz="0" iyy="1.1493e-08" iyz="0" izz="6.201e-09"/>
+    </inertial>
+    <!-- Part hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_4 -->
+    <visual>
+      <origin xyz="-0 0 0.0028" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b.stl"/>
+      </geometry>
+      <material name="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_4_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0.0028" rpy="0 -0 0"/>
+      <geometry>
+        <mesh filename="package://assets/hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from stepper_motor_2 to hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_4 -->
+  <joint name="f8" type="fixed">
+    <origin xyz="-0.035 -0 -0.0008" rpy="-3.14159 0 1.5708"/>
+    <parent link="stepper_motor_2"/>
+    <child link="hex_socket_head_cap_screw_m4x0_70_x_6__52230e09e6b8162f7a31d58ec48e066b_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from large_support to stepper_motor_2 -->
+  <joint name="f4" type="fixed">
+    <origin xyz="0.06754 0.0175 0.06195" rpy="-1.5708 -0 1.5708"/>
+    <parent link="large_support"/>
+    <child link="stepper_motor_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link 375__round_id__875__od_radial_bearing__217_3239 -->
+  <link name="375__round_id__875__od_radial_bearing__217_3239">
+    <inertial>
+      <origin xyz="0 0 -0.003572" rpy="0 0 0"/>
+      <mass value="0.0136078"/>
+      <inertia ixx="5.52118e-07" ixy="0" ixz="-0" iyy="5.52118e-07" iyz="0" izz="9.9938e-07"/>
+    </inertial>
+    <!-- Part 375__round_id__875__od_radial_bearing__217_3239 -->
+    <visual>
+      <origin xyz="-0 0 0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+      <material name="375__round_id__875__od_radial_bearing__217_3239_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link spacer -->
+  <link name="spacer">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part spacer -->
+    <visual>
+      <origin xyz="0 0 -0.05334" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/spacer.stl"/>
+      </geometry>
+      <material name="spacer_material">
+        <color rgba="0.768627 0.886275 0.952941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.05334" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/spacer.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link 375__round_id__875__od_radial_bearing__217_3239_2 -->
+  <link name="375__round_id__875__od_radial_bearing__217_3239_2">
+    <inertial>
+      <origin xyz="0 0 -0.003572" rpy="0 0 0"/>
+      <mass value="0.0136078"/>
+      <inertia ixx="5.52118e-07" ixy="-0" ixz="-0" iyy="5.52118e-07" iyz="0" izz="9.9938e-07"/>
+    </inertial>
+    <!-- Part 375__round_id__875__od_radial_bearing__217_3239_2 -->
+    <visual>
+      <origin xyz="0 0 -0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+      <material name="375__round_id__875__od_radial_bearing__217_3239_2_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link bottom_enclosure -->
+  <link name="bottom_enclosure">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part bottom_enclosure -->
+    <visual>
+      <origin xyz="0 0 0.0508" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/bottom_enclosure.stl"/>
+      </geometry>
+      <material name="bottom_enclosure_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0508" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/bottom_enclosure.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link top_enclosure -->
+  <link name="top_enclosure">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part top_enclosure -->
+    <visual>
+      <origin xyz="-0.04572 0.00762 0.03175" rpy="3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/top_enclosure.stl"/>
+      </geometry>
+      <material name="top_enclosure_material">
+        <color rgba="0.231373 0.380392 0.705882 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0.04572 0.00762 0.03175" rpy="3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/top_enclosure.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link large_gear -->
+  <link name="large_gear">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part large_gear -->
+    <visual>
+      <origin xyz="-0 0 -0.0245731" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/large_gear.stl"/>
+      </geometry>
+      <material name="large_gear_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 0 -0.0245731" rpy="-0 -0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/large_gear.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link headtop -->
+  <link name="headtop">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part headtop -->
+    <visual>
+      <origin xyz="-4.06049e-05 -0.00112601 -0.00609172" rpy="3.13327 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/headtop.stl"/>
+      </geometry>
+      <material name="headtop_material">
+        <color rgba="0.615686 0.811765 0.929412 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-4.06049e-05 -0.00112601 -0.00609172" rpy="3.13327 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/headtop.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part neckconnector -->
+    <visual>
+      <origin xyz="0 0 -0.09355" rpy="-3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/neckconnector.stl"/>
+      </geometry>
+      <material name="neckconnector_material">
+        <color rgba="0.498039 0.498039 0.498039 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.09355" rpy="-3.14159 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/neckconnector.stl"/>
+      </geometry>
+    </collision>
+    <!-- Part phonehead -->
+    <visual>
+      <origin xyz="-6.88094e-05 -0.00180834 -0.0498536" rpy="3.13327 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/phonehead.stl"/>
+      </geometry>
+      <material name="phonehead_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-6.88094e-05 -0.00180834 -0.0498536" rpy="3.13327 0 0"/>
+      <geometry>
+        <mesh filename="package://assets/phonehead.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from large_gear to headtop -->
+  <joint name="f5" type="fixed">
+    <origin xyz="0 -0 0.0351276" rpy="3.14159 -0 -0"/>
+    <parent link="large_gear"/>
+    <child link="headtop"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from top_enclosure to large_gear -->
+  <joint name="topgear" type="revolute">
+    <origin xyz="-0.04572 0.00762 0.00508" rpy="3.14159 0 0.389242"/>
+    <parent link="top_enclosure"/>
+    <child link="large_gear"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <mimic joint="leftGear" multiplier="-0.5555555555555556"/>
+  </joint>
+  <!-- Link socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474 -->
+  <link name="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474">
+    <inertial>
+      <origin xyz="0 0 -0.00818818" rpy="0 0 0"/>
+      <mass value="0.00513271"/>
+      <inertia ixx="4.45103e-07" ixy="-0" ixz="-0" iyy="4.45103e-07" iyz="0" izz="2.4035e-08"/>
+    </inertial>
+    <!-- Part socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474.stl"/>
+      </geometry>
+      <material name="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_material">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from top_enclosure to socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474 -->
+  <joint name="f9" type="fixed">
+    <origin xyz="-0 -0 -0.0127" rpy="3.14159 -0 -0"/>
+    <parent link="top_enclosure"/>
+    <child link="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link 375__round_id__875__od_radial_bearing__217_3239_3 -->
+  <link name="375__round_id__875__od_radial_bearing__217_3239_3">
+    <inertial>
+      <origin xyz="0 -0 -0.003572" rpy="0 0 0"/>
+      <mass value="0.0136078"/>
+      <inertia ixx="5.52118e-07" ixy="0" ixz="0" iyy="5.52118e-07" iyz="-0" izz="9.9938e-07"/>
+    </inertial>
+    <!-- Part 375__round_id__875__od_radial_bearing__217_3239_3 -->
+    <visual>
+      <origin xyz="0 -0 0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+      <material name="375__round_id__875__od_radial_bearing__217_3239_3_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from top_enclosure to 375__round_id__875__od_radial_bearing__217_3239_3 -->
+  <joint name="f0" type="fixed">
+    <origin xyz="-0.04572 0.00762 -0.0127" rpy="3.14159 -0 -0"/>
+    <parent link="top_enclosure"/>
+    <child link="375__round_id__875__od_radial_bearing__217_3239_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link spacer_2 -->
+  <link name="spacer_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part spacer_2 -->
+    <visual>
+      <origin xyz="0 -0 0.0508" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/spacer.stl"/>
+      </geometry>
+      <material name="spacer_2_material">
+        <color rgba="0.768627 0.886275 0.952941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0.0508" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/spacer.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from top_enclosure to spacer_2 -->
+  <joint name="f7" type="fixed">
+    <origin xyz="-0.04572 0.00762 -0" rpy="3.14159 -0 -0"/>
+    <parent link="top_enclosure"/>
+    <child link="spacer_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_2 -->
+  <link name="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_2">
+    <inertial>
+      <origin xyz="0 0 -0.00818818" rpy="0 0 0"/>
+      <mass value="0.00513271"/>
+      <inertia ixx="4.45103e-07" ixy="-0" ixz="-0" iyy="4.45103e-07" iyz="0" izz="2.4035e-08"/>
+    </inertial>
+    <!-- Part socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_2 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474.stl"/>
+      </geometry>
+      <material name="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_2_material">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from top_enclosure to socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_2 -->
+  <joint name="f9" type="fixed">
+    <origin xyz="-0.09144 -0 -0.0127" rpy="3.14159 -0 -0"/>
+    <parent link="top_enclosure"/>
+    <child link="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_3 -->
+  <link name="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_3">
+    <inertial>
+      <origin xyz="0 -0 -0.00818818" rpy="0 0 0"/>
+      <mass value="0.00513271"/>
+      <inertia ixx="4.45103e-07" ixy="-0" ixz="-0" iyy="4.45103e-07" iyz="0" izz="2.4035e-08"/>
+    </inertial>
+    <!-- Part socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_3 -->
+    <visual>
+      <origin xyz="0 -0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474.stl"/>
+      </geometry>
+      <material name="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_3_material">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 -0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from top_enclosure to socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_3 -->
+  <joint name="f9" type="fixed">
+    <origin xyz="-0.09144 0.01524 -0.0127" rpy="3.14159 -0 -0"/>
+    <parent link="top_enclosure"/>
+    <child link="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_4 -->
+  <link name="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_4">
+    <inertial>
+      <origin xyz="0 0 -0.00818818" rpy="0 0 0"/>
+      <mass value="0.00513271"/>
+      <inertia ixx="4.45103e-07" ixy="-0" ixz="-0" iyy="4.45103e-07" iyz="0" izz="2.4035e-08"/>
+    </inertial>
+    <!-- Part socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_4 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474.stl"/>
+      </geometry>
+      <material name="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_4_material">
+        <color rgba="0.5 0.5 0.5 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 -0"/>
+      <geometry>
+        <mesh filename="package://assets/socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from top_enclosure to socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_4 -->
+  <joint name="f9" type="fixed">
+    <origin xyz="-0 0.01524 -0.0127" rpy="3.14159 -0 -0"/>
+    <parent link="top_enclosure"/>
+    <child link="socket_head_cap_screw__10_32_x_1__ce3b92dae7529e19d48acf72f7418474_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from bottom_enclosure to top_enclosure -->
+  <joint name="f6" type="fixed">
+    <origin xyz="0.00762 0.03175 0.09652" rpy="1.5708 -1.5708 0"/>
+    <parent link="bottom_enclosure"/>
+    <child link="top_enclosure"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link spacer_3 -->
+  <link name="spacer_3">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part spacer_3 -->
+    <visual>
+      <origin xyz="-0 -0 0.0508" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/spacer.stl"/>
+      </geometry>
+      <material name="spacer_3_material">
+        <color rgba="0.768627 0.886275 0.952941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="-0 -0 0.0508" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/spacer.stl"/>
+      </geometry>
+    </collision>
+  </link>
   <!-- Link small_gear -->
   <link name="small_gear">
     <inertial>
@@ -11,7 +796,7 @@
     </inertial>
     <!-- Part small_gear -->
     <visual>
-      <origin xyz="-0.0002089 0 0.06985" rpy="1.44409 0 -0"/>
+      <origin xyz="0 0 -0.0353511" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://assets/small_gear.stl"/>
       </geometry>
@@ -20,10 +805,187 @@
       </material>
     </visual>
     <collision>
-      <origin xyz="-0.0002089 0 0.06985" rpy="1.44409 0 -0"/>
+      <origin xyz="0 0 -0.0353511" rpy="1.5708 1.5708 0"/>
       <geometry>
         <mesh filename="package://assets/small_gear.stl"/>
       </geometry>
     </collision>
   </link>
+  <!-- Joint from spacer_3 to small_gear -->
+  <joint name="leftGear" type="revolute">
+    <origin xyz="-0 -0 -0.00254" rpy="-0 -0 0.700636"/>
+    <parent link="spacer_3"/>
+    <child link="small_gear"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from bottom_enclosure to spacer_3 -->
+  <joint name="f7" type="fixed">
+    <origin xyz="0 -0 0.0889" rpy="0 0 -0"/>
+    <parent link="bottom_enclosure"/>
+    <child link="spacer_3"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link 375__round_id__875__od_radial_bearing__217_3239_4 -->
+  <link name="375__round_id__875__od_radial_bearing__217_3239_4">
+    <inertial>
+      <origin xyz="0 0 -0.003572" rpy="0 0 0"/>
+      <mass value="0.0136078"/>
+      <inertia ixx="5.52118e-07" ixy="-0" ixz="0" iyy="5.52118e-07" iyz="0" izz="9.9938e-07"/>
+    </inertial>
+    <!-- Part 375__round_id__875__od_radial_bearing__217_3239_4 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+      <material name="375__round_id__875__od_radial_bearing__217_3239_4_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from bottom_enclosure to 375__round_id__875__od_radial_bearing__217_3239_4 -->
+  <joint name="f0" type="fixed">
+    <origin xyz="0 0 0.1016" rpy="0 -0 -0"/>
+    <parent link="bottom_enclosure"/>
+    <child link="375__round_id__875__od_radial_bearing__217_3239_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link spacer_4 -->
+  <link name="spacer_4">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part spacer_4 -->
+    <visual>
+      <origin xyz="0 0 0.0508" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/spacer.stl"/>
+      </geometry>
+      <material name="spacer_4_material">
+        <color rgba="0.768627 0.886275 0.952941 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.0508" rpy="-1.5708 -1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/spacer.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Link small_gear_2 -->
+  <link name="small_gear_2">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="1e-09"/>
+      <inertia ixx="1e-09" ixy="0" ixz="0" iyy="1e-09" iyz="0" izz="1e-09"/>
+    </inertial>
+    <!-- Part small_gear_2 -->
+    <visual>
+      <origin xyz="0 0 -0.0353511" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/small_gear.stl"/>
+      </geometry>
+      <material name="small_gear_2_material">
+        <color rgba="0.917647 0.917647 0.917647 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 -0.0353511" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/small_gear.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from spacer_4 to small_gear_2 -->
+  <joint name="rightGear" type="revolute">
+    <origin xyz="0 -0 -0.00254" rpy="-0 -0 1.78704"/>
+    <parent link="spacer_4"/>
+    <child link="small_gear_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+    <mimic joint="topgear" multiplier="-0.5555555555555556"/>
+  </joint>
+  <!-- Joint from bottom_enclosure to spacer_4 -->
+  <joint name="f7" type="fixed">
+    <origin xyz="-0 -0 0.0127" rpy="3.14159 0 0"/>
+    <parent link="bottom_enclosure"/>
+    <child link="spacer_4"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from 375__round_id__875__od_radial_bearing__217_3239_2 to bottom_enclosure -->
+  <joint name="f0" type="fixed">
+    <origin xyz="0 0 -0" rpy="3.14159 -0 0"/>
+    <parent link="375__round_id__875__od_radial_bearing__217_3239_2"/>
+    <child link="bottom_enclosure"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from spacer to 375__round_id__875__od_radial_bearing__217_3239_2 -->
+  <joint name="f1" type="fixed">
+    <origin xyz="0 0 -0.00254" rpy="0 0 0"/>
+    <parent link="spacer"/>
+    <child link="375__round_id__875__od_radial_bearing__217_3239_2"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Joint from 375__round_id__875__od_radial_bearing__217_3239 to spacer -->
+  <joint name="carriage" type="revolute">
+    <origin xyz="0 0 0" rpy="-3.14159 -0 0.129164"/>
+    <parent link="375__round_id__875__od_radial_bearing__217_3239"/>
+    <child link="spacer"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10" lower="-3.141592653589793" upper="3.141592653589793"/>
+  </joint>
+  <!-- Joint from large_support to 375__round_id__875__od_radial_bearing__217_3239 -->
+  <joint name="f0" type="fixed">
+    <origin xyz="-0.05334 0 0.06985" rpy="1.5708 0 1.5708"/>
+    <parent link="large_support"/>
+    <child link="375__round_id__875__od_radial_bearing__217_3239"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
+  <!-- Link 375__round_id__875__od_radial_bearing__217_3239_5 -->
+  <link name="375__round_id__875__od_radial_bearing__217_3239_5">
+    <inertial>
+      <origin xyz="0 0 -0.003572" rpy="0 0 0"/>
+      <mass value="0.0136078"/>
+      <inertia ixx="5.52118e-07" ixy="0" ixz="0" iyy="5.52118e-07" iyz="0" izz="9.9938e-07"/>
+    </inertial>
+    <!-- Part 375__round_id__875__od_radial_bearing__217_3239_5 -->
+    <visual>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+      <material name="375__round_id__875__od_radial_bearing__217_3239_5_material">
+        <color rgba="0.603922 0.647059 0.686275 1"/>
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="1.5708 1.5708 0"/>
+      <geometry>
+        <mesh filename="package://assets/375__round_id__875__od_radial_bearing__217_3239.stl"/>
+      </geometry>
+    </collision>
+  </link>
+  <!-- Joint from large_support to 375__round_id__875__od_radial_bearing__217_3239_5 -->
+  <joint name="f0" type="fixed">
+    <origin xyz="0.05334 0 0.06985" rpy="-1.5708 0 1.5708"/>
+    <parent link="large_support"/>
+    <child link="375__round_id__875__od_radial_bearing__217_3239_5"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="10"/>
+  </joint>
 </robot>
