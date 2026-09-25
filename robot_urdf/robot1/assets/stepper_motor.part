@@ -1,0 +1,14 @@
+{
+    "configuration": "default",
+    "documentId": "67cad66ce54870e0dd392d7a",
+    "documentMicroversion": "294bc45c4f9f6be32f3b564e",
+    "documentVersion": "7cb91ef22dd4bb67ff053279",
+    "elementId": "bcc1b296dc539cb6839d0a9f",
+    "fullConfiguration": "default",
+    "id": "M0JnJnUbILdX0GRto",
+    "isStandardContent": false,
+    "name": "Stepper Motor <1>",
+    "partId": "JFT",
+    "suppressed": false,
+    "type": "Part"
+}
