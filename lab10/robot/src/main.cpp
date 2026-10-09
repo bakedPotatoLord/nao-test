@@ -1,17 +1,17 @@
 #include <Arduino.h>
 
 
-#include <Arduino/Stepper.h>
+#include <Stepper.h>
 
-#define stepperpin1_1 3;
-#define stepperpin1_1 4;
-#define stepperpin1_1 5;
-#define stepperpin1_1 6;
+#define stepperpin1_1 2
+#define stepperpin1_2 3
+#define stepperpin1_3 4
+#define stepperpin1_4 5
 
-#define stepperpin1_1 7;
-#define stepperpin1_1 8;
-#define stepperpin1_1 9;
-#define stepperpin1_1 10;
+#define stepperpin2_1 7
+#define stepperpin2_2 8
+#define stepperpin2_3 9
+#define stepperpin2_4 10
 
 #define smallGearTeeth 16;
 
@@ -23,14 +23,15 @@ Stepper stepper2(200, stepperpin2_1, stepperpin2_2, stepperpin2_3, stepperpin2_4
 
 void setup() {
   // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+  stepper1.setSpeed(60);
+  stepper2.setSpeed(60);
 }
 
 void loop() {
   // put your main code here, to run repeatedly:
+  stepper1.step(3);
+  delay(100);
+  stepper1.step(-3);
+  delay(100);
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
