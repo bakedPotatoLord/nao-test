@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<title>Peerbots Phone Microphone</title>
+<style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#000;font-family:system-ui}
+iframe{position:fixed;inset:0;width:100%;height:100%;border:0}
+#start{position:fixed;z-index:10;left:50%;top:50%;transform:translate(-50%,-50%);padding:18px 25px;font-size:20px;border:0;border-radius:12px;background:#fff;color:#111}
+#status{position:fixed;z-index:9;bottom:8px;left:8px;color:#fff;background:#0009;padding:5px 9px;border-radius:5px;font-size:12px;pointer-events:none}
+</style>
+</head>
+<body>
+<iframe src="https://app.peerbots.org/face" allow="autoplay; camera; microphone; fullscreen" allowfullscreen></iframe>
+<button id="start">Enable microphone</button><div id="status">Not connected</div>
+<script>
+const button=document.getElementById('start'), status=document.getElementById('status');
+let audioContext, stream, socket, processor;
+button.onclick=async()=>{
+  button.disabled=true;
+  try {
+    stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true,autoGainControl:true},video:false});
+    audioContext=new (window.AudioContext||window.webkitAudioContext)();
+    await audioContext.resume();
+    const source=audioContext.createMediaStreamSource(stream);
+    // ScriptProcessor is broadly supported, including older mobile browsers.
+    processor=audioContext.createScriptProcessor(4096,1,1);
+    const mute=audioContext.createGain();mute.gain.value=0;
+    source.connect(processor);processor.connect(mute);mute.connect(audioContext.destination);
+    socket=new WebSocket((location.protocol==='https:'?'wss://':'ws://')+location.host+'/audio'+location.search);
+    socket.binaryType='arraybuffer';
+    let carry=new Float32Array(0);
+    processor.onaudioprocess=(event)=>{
+      if(!socket||socket.readyState!==WebSocket.OPEN)return;
+      const input=event.inputBuffer.getChannelData(0);
+      const joined=new Float32Array(carry.length+input.length);
+      joined.set(carry);joined.set(input,carry.length);
+      const ratio=audioContext.sampleRate/16000;
+      const count=Math.floor(joined.length/ratio);
+      if(!count){carry=joined;return;}
+      const out=new Int16Array(count);
+      for(let i=0;i<count;i++){
+        const pos=Math.floor(i*ratio), next=Math.min(pos+1,joined.length-1);
+        const t=i*ratio-pos;
+        const sample=Math.max(-1,Math.min(1,joined[pos]*(1-t)+joined[next]*t));
+        out[i]=sample<0?sample*32768:sample*32767;
+      }
+      carry=joined.slice(Math.floor(count*ratio));
+      if(socket.bufferedAmount<262144)socket.send(out.buffer);
+    };
+    socket.onopen=()=>{status.textContent='Microphone connected';button.style.display='none';};
+    socket.onclose=()=>{status.textContent='Connection lost — reload page';button.style.display='block';button.disabled=false;};
+    socket.onerror=()=>{status.textContent='Connection error';};
+  } catch(err){status.textContent=err.message;button.disabled=false;}
+};
+</script>
+</body>
+</html>

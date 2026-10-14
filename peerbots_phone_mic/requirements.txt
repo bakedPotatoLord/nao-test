@@ -1,0 +1,6 @@
+aiohttp>=3.9
+numpy>=1.24
+SpeechRecognition>=3.10
+openai>=1.0
+
+requests>=2.31
