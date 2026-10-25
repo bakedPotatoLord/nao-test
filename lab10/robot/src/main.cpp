@@ -67,6 +67,8 @@ enum EmoteState {
     EMOTE_NOD_YES,
     EMOTE_LOOK_LEFT,
     EMOTE_LOOK_RIGHT,
+    EMOTE_LOOK_UP_RIGHT,
+    EMOTE_LOOK_DOWN,
 };
 
 enum ControllerState {
@@ -110,7 +112,14 @@ EmoteConfig emoteConfigs[] = {
     { 45.0f, 0.0f, 300.0f, 180.0f, 0 },
 
     // Turn and hold gaze right
-    { 45.0f, 0.0f, 300.0f, 180.0f, 0 }
+    { 45.0f, 0.0f, 300.0f, 180.0f, 0 },
+
+    // Look up and twist right, then hold until another command.
+    { 30.0f, 4.0f, 180.0f, 140.0f, 0 },
+
+    // Look down, then hold until another command.
+    // tiltRange is a positive magnitude; the pose applies the minus sign.
+    {  0.0f, 4.0f, 140.0f, 140.0f, 0 }
 };
 
 // ---------------- POSITION STATE ----------------
@@ -248,6 +257,14 @@ void issueEmotePose() {
         case EMOTE_LOOK_RIGHT:
             moveToPose(r, 0);
             break;
+
+        case EMOTE_LOOK_UP_RIGHT:
+            moveToPose(r, t);
+            break;
+
+        case EMOTE_LOOK_DOWN:
+            moveToPose(0, -t);
+            break;
     }
 }
 
@@ -289,12 +306,19 @@ void setEmote(EmoteState emote) {
         case EMOTE_LOOK_RIGHT:
             Serial.println(F("EMOTE_LOOK_RIGHT"));
             break;
+        case EMOTE_LOOK_UP_RIGHT:
+            Serial.println(F("EMOTE_LOOK_UP_RIGHT"));
+            break;
+        case EMOTE_LOOK_DOWN:
+            Serial.println(F("EMOTE_LOOK_DOWN"));
+            break;
     }
 }
 
 bool isHoldingGaze() {
     return currentEmote == EMOTE_LOOK_LEFT ||
-           currentEmote == EMOTE_LOOK_RIGHT;
+           currentEmote == EMOTE_LOOK_RIGHT ||
+           currentEmote == EMOTE_LOOK_UP_RIGHT;
 }
 
 void updateEmote() {
@@ -453,13 +477,24 @@ void processCommand(char* line) {
              strcmp(command, "look_right") == 0) {
         setEmote(EMOTE_LOOK_RIGHT);
     }
+    else if (strcmp(command, "EMOTE_LOOK_UP_RIGHT") == 0 ||
+             strcmp(command, "look_up_right") == 0) {
+        setEmote(EMOTE_LOOK_UP_RIGHT);
+    }
+    else if (strcmp(command, "EMOTE_LOOK_DOWN") == 0 ||
+             strcmp(command, "look_down") == 0) {
+        setEmote(EMOTE_LOOK_DOWN);
+    }
     else {
         Serial.println(F("ERR: unknown emotion"));
         Serial.println(
             F("Use EMOTE_BREATHE, EMOTE_NOD_NO, EMOTE_NOD_YES,")
         );
         Serial.println(
-            F("EMOTE_LOOK_LEFT, EMOTE_LOOK_RIGHT, or home")
+            F("EMOTE_LOOK_LEFT, EMOTE_LOOK_RIGHT,")
+        );
+        Serial.println(
+            F("EMOTE_LOOK_UP_RIGHT, EMOTE_LOOK_DOWN, or home")
         );
     }
 }
