@@ -1,0 +1,26 @@
+# Secrets
+.env
+.peerbots_token
+
+# Runtime files
+*.log
+history.txt
+response.txt
+listen.txt
+
+# Downloaded tools and Python environment
+tools/
+.venv/
+__pycache__/
+
+# Backups
+*.bak*
+*.backup
+*.working
+*.complex
+*.nogesture
+*.v4
+*.v5
+
+# Local test script
+peerbots_check.py
