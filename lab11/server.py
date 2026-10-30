@@ -2,6 +2,7 @@ import asyncio
 import glob
 import json
 import os
+import sys
 import threading
 import time
 from pathlib import Path
@@ -67,13 +68,26 @@ arduino = None
 def connect_arduino():
     """Open the Arduino's serial port. The robot still talks if no Arduino is plugged in."""
     global arduino
+
     ports = sorted(glob.glob('/dev/ttyACM*') + glob.glob('/dev/ttyUSB*'))
+
+    if sys.platform == 'win32':
+        ports.append('COM7')
+
     if serial is None or not ports:
         print('No Arduino found, head will not move', flush=True)
         return
-    arduino = serial.Serial(ports[0], 9600, timeout=1)
-    print('Arduino connected on', ports[0], flush=True)
-    threading.Thread(target=read_arduino, daemon=True).start()
+
+    for port in ports:
+        try:
+            arduino = serial.Serial(port, 9600, timeout=1)
+            print('Arduino connected on', port, flush=True)
+            threading.Thread(target=read_arduino, daemon=True).start()
+            return
+        except serial.SerialException as e:
+            print(f'Could not connect to {port}: {e}', flush=True)
+
+    print('No Arduino found, head will not move', flush=True)
 
 
 def read_arduino():
