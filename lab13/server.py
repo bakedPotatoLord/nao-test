@@ -64,15 +64,39 @@ def send_head_command(command):
 gaze = Gaze(send=send_head_command)
 
 
+ARDUINO_USB_IDS = {0x2341, 0x2A03, 0x1A86, 0x0403, 0x10C4}
+
+
+def find_arduino_port():
+    if os.getenv('ARDUINO_PORT'):
+        return os.environ['ARDUINO_PORT']
+    ports = sorted(glob.glob('/dev/ttyACM*') + glob.glob('/dev/ttyUSB*')
+                   + glob.glob('/dev/cu.usbmodem*') + glob.glob('/dev/cu.usbserial*'))
+    if ports:
+        return ports[0]
+    try:
+        from serial.tools import list_ports
+    except ImportError:
+        return None
+    for port in list_ports.comports():
+        if port.vid in ARDUINO_USB_IDS or 'arduino' in (port.description or '').lower():
+            return port.device
+    return None
+
+
 def connect_arduino():
     """Open the Arduino's serial port. The robot still talks if no Arduino is plugged in."""
     global arduino
-    ports = sorted(glob.glob('/dev/ttyACM*') + glob.glob('/dev/ttyUSB*'))
-    if serial is None or not ports:
+    port = find_arduino_port() if serial is not None else None
+    if not port:
         print('No Arduino found, head will not move', flush=True)
         return
-    arduino = serial.Serial(ports[0], 9600, timeout=1)
-    print('Arduino connected on', ports[0], flush=True)
+    try:
+        arduino = serial.Serial(port, 9600, timeout=1)
+    except Exception as exc:
+        print(f'Could not open Arduino on {port}:', exc, flush=True)
+        return
+    print('Arduino connected on', port, flush=True)
     threading.Thread(target=read_arduino, daemon=True).start()
 
 
